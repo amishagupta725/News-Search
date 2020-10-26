@@ -10,10 +10,9 @@ app.get("/",function(req,res){
 
 app.get("/results",function(req,res){
     var query = req.query.search;
+    console.log(query);
     var url = 'http://newsapi.org/v2/everything?' +
     'q='+query+'&' +
-    'from=2020-09-13&' +
-    'sortBy=popularity&' +
     'apiKey=dac2facfdf1a47a9937ffd8504581c0d'; 
   request(url,function(error, response, body){
       var status = response.statusCode;
